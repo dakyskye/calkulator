@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="PrimaryButton" parent="Theme.Calkulator">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">30sp</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">80dp</item>
+        <item name="android:layout_marginStart">15dp</item>
+        <item name="android:layout_marginBottom">15dp</item>
+        <item name="android:background">@drawable/number_button</item>
+        <item name="android:onClick">onPrimaryButtonClick</item>
+    </style>
+
+    <style name="UtilityButton" parent="Theme.Calkulator">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">30sp</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">80dp</item>
+        <item name="android:layout_marginStart">15dp</item>
+        <item name="android:layout_marginBottom">15dp</item>
+        <item name="android:background">@drawable/utility_button</item>
+    </style>
+
+    <style name="OperatorButton" parent="Theme.Calkulator">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">30sp</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">80dp</item>
+        <item name="android:layout_marginStart">15dp</item>
+        <item name="android:layout_marginEnd">15dp</item>
+        <item name="android:layout_marginBottom">15dp</item>
+        <item name="android:background">@drawable/operator_button</item>
+    </style>
+
+    <style name="Result" parent="Theme.Calkulator">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">70sp</item>
+        <item name="android:layout_marginStart">40dp</item>
+        <item name="android:layout_marginEnd">40dp</item>
+        <item name="android:layout_marginBottom">25dp</item>
+        <item name="android:autoSizeTextType">uniform</item>
+        <item name="android:maxLength">13</item>
+        <item name="android:maxLines">1</item>
+    </style>
+</resources>
