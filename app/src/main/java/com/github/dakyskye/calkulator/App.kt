@@ -41,8 +41,8 @@ class App(
             ""
         }
 
-        val commaIndex = toApply.indexOfFirst { it.toString() == DOT }
-        when (commaIndex) {
+        val dotIndex = toApply.indexOfFirst { it.toString() == DOT }
+        when (dotIndex) {
             MAX_TEXT_LENGTH - 1 -> {
                 if (toApply.length > MAX_TEXT_LENGTH + 1) {
                     toApply = toApply.take(MAX_TEXT_LENGTH + 1)
@@ -77,9 +77,13 @@ class App(
             val chunks = separate(toApply.reversed())
             chunks.joinToString(" ").reversed()
         } else {
-            val taken = toApply.take(commaIndex - 1)
-            val chunks = separate(taken.reversed())
-            toApply.replace(taken, chunks.joinToString(" ").reversed())
+            if (dotIndex < 1) {
+                toApply
+            } else {
+                val taken = toApply.take(dotIndex - 1)
+                val chunks = separate(taken.reversed())
+                toApply.replace(taken, chunks.joinToString(" ").reversed())
+            }
         }.replace(DOT, COMMA)
 
         resultTextView.text = toApply
