@@ -266,4 +266,3 @@ fabric.properties
 /build
 /captures
 .cxx
-gradle/
